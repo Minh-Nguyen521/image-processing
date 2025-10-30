@@ -12,3 +12,21 @@
 ## Train
 
 - using resnet 50 to train (built in func 😀)
+
+## Dataset
+
+https://www.kaggle.com/datasets/balabaskar/count-coins-image-dataset
+
+## Run
+
+-  Train
+
+```
+python3 train.py
+```
+
+- Predict
+
+```
+python3 predict.py
+```
