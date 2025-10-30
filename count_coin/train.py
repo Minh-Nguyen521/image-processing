@@ -105,6 +105,7 @@ def train_model(root_dir, csv_file, epochs=15, batch_size=16, lr=1e-4, device=No
             pred = model(imgs)
             total_err += (pred - counts.squeeze()).abs().item()
     print(f"Test MAE = {total_err / len(ds_test):.3f}")
+    print(f"Accuracy within ±0.5: {sum(1 for imgs, counts in dl_test if abs(model(imgs.to(device)) - counts.to(device).squeeze()) <= 0.5) / len(ds_test):.3%}")
 
 if __name__ == "__main__":
     train_model(
