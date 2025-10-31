@@ -30,3 +30,5 @@ python3 train.py
 ```
 python3 predict.py
 ```
+
+![Coin](2c8f0e58fb.jpg)
