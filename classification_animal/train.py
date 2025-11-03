@@ -85,7 +85,7 @@ def train_model(root_dir, csv_file, epochs=15, batch_size=16, lr=1e-4, device=No
             labels = labels.to(device).long()             # [B], ints
 
             logits = model(imgs)                          # [B, K]
-            print("logits", logits.shape, "labels", labels.shape, labels.dtype) # Expect logits [B, C], labels [B], long
+            # print("logits", logits.shape, "labels", labels.shape, labels.dtype) # Expect logits [B, C], labels [B], long
             loss = criterion(logits, labels)
 
             opt.zero_grad(set_to_none=True)
